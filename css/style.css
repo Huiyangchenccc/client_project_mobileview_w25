@@ -19,109 +19,114 @@
 /* Body styles */
 body {
     font-size: 16px;;
-    background: rgb(199,255,255);
-    background: linear-gradient(0deg, rgba(199,255,255,1) 29%, rgba(255,233,187,1) 100%);
+    background: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
     color: black;
     padding: 10px; /* Padding to avoid content reaching the edge */
+    overflow-x: hidden;
 }
 
-.logo {
-    text-align: center;
-    margin-top: 20px; /* Add some space above the logo */
-}
 
 /* Logo image styles */
-.logo img {
-    width: 10%;
-    height: auto;
-    display: block;
-    margin: 5px;
+img#logo{
+    max-height: 70px;
+    max-width: 70px;
+    margin: 28px auto 12px auto;
+    border-radius: 8px;
 }
 
 
-header nav {
+/* header nav {
     position: sticky;
     width: auto;
-    padding: 10px;
+    padding: 20px;
     z-index: 100;
     top: -20px;
-}
+} */
+
 
 /* Style for the navigation links ///////////////////////////////////////////////////////////////*/
-header nav ul {
-    font-size: 16px;
-    background-color: #FFCB05;
-    padding: 2px;
-    margin: 2px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+
+a {
+    color: #00274C;
+    text-decoration: underline;
 }
 
-header nav ul li a {
-    color: rgb(0, 0, 0);
-    padding: 15px;
+a:hover {
+    color: #0a1eff;
+    text-decoration: underline;
+}
+nav {
+    overflow: hidden;
+    background-color: #fff5c7;
+    border-radius: 20px;
+    width: 100%;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+nav a {
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
     display: block;
 }
 
-header nav ul li a.target {
-    background-color: #D86018;
-    font-weight: heavy;
-    text-decoration: underline;
-    font-size: 30px;
-    color: white;
+nav a.active {
+    background-color: #004e97;
+    color: #FFCB05;
+    border-radius: 10px;
+    font-weight: bold;
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        justify-content: center;
+        align-content: center;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    align-content: center;
 }
-
-header nav ul li a:focus {
-    background-color: #D86018;
-    font-weight: heavy;
-    text-decoration: underline;
-    font-size: 25px;
-    color: white;
-}
-
 
 
 /* Heading styles ////////////////////////////////////////////////////////////////*/
 h1{
-    font-size: 27px;
+    font-size: 35px;
     font-family: 'Oswald', sans-serif;
     font-weight: heavy;
-    color: #2F65A7;
+    color: #000f22;
     text-align: left;
-    line-height: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    line-height: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-h2, h3 {
+h2 {
+    font-size: 28px;
+    font-family: 'Oswald', sans-serif;
+    color: #2F65A7;
+    text-align: left;
+    line-height: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h3 {
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     color: #2F65A7;
     text-align: left;
     line-height: 25px;
-    margin-top: 5px;
+    margin-top: 30px;
     margin-bottom: 5px;
 }
-h4 {
-    font-size: 18px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: #2F65A7;
-    text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-}
-h5 {
-    font-size: 16px;
-    font-family: 'Oswald', sans-serif;
-    color: #2F65A7;
-    text-align: center;
-    padding: 15px;
-    margin-bottom: 30px;;
-    border-radius: 10px;
-}
+
+
 
 /* Paragraph styles */
 p {
@@ -145,6 +150,7 @@ img {
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
+    border-radius: 8px;
 }
 
 /* Main content container styles */
@@ -200,18 +206,21 @@ img {
     gap: 15px;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 .UHS-image img, .sports-image img {
     grid-column: 1 / 2;
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    border-radius: 8px;
 }
 .UHS-image p, .sports-image p {
     grid-column: 2 / 3;
     text-align: left;
     font-size: 15px;
     line-height: 20px;
+    border-radius: 8px;
 }
 
 /* FOOD PANTRY PAGE*/
@@ -238,6 +247,7 @@ img {
 .carrot-image, {
     grid-column: 1 / -1;
     margin-bottom: 40px;
+    border-radius: 8px;
 }
 .apple-image, .vege-image, .shopping-image {
     display: grid;
@@ -245,11 +255,13 @@ img {
     gap: 15px;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 .apple-image img, .vege-image img, .shopping-image img {
     grid-column: 1 / 2;
     width: 100%;
     height: 100%;
+    border-radius: 8px;
 }
 .apple-image p, .vege-image p, .shopping-image p {
     grid-column: 2 / 3;
@@ -283,6 +295,7 @@ img {
     gap: 15px;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 .campus-image img, .north-image img, .library-image img {
     grid-column: 1 / span 3;
@@ -290,24 +303,10 @@ img {
     height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
-.campus-image h4, .north-image h4, .library-image h4 {
-    grid-column: 4/ -1;
-    text-align: center;
-    translate: -50px 0px;
-}
+
 /* Navigation styles //////////////////////////////////////////////////////////////// */
-
-nav ul li a {
-    justify-content: space-around;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
 
 
 .go-to-top {

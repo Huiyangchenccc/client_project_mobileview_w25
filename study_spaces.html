@@ -12,81 +12,77 @@
 </head>
 
 <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
-        <nav>
-            <div class = "logo">
-                <img src="images/logo.jpg" alt="UMSI Logo">
-            </div>
+        <img id="logo" src="images/logo.jpg" width="100" alt="UMSI Logo">
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "food_pantry.html">Food Pantry</a></li>
-                <li><a href = "study_spaces.html">Study Spaces</a></li>
-                <li><a href = "academic_advising.html">MSI Academic Advising Resource Site</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="food_pantry.html">Food Pantry</a></li>
+                <li><a class="active" href="study_spaces.html" aria-current="page">Study Spaces</a></li>
+                <li><a href="academic_advising.html">MSI Academic Advising</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class = "container" id = "main">
-        <div class = "overview">
-            <h1>Umich Good Study Spots</h1>
+    <main class="container" id="main">
+        <section class="overview" aria-labelledby="main-heading">
+            <h1 id="main-heading">Umich Good Study Spots</h1>
             <p>Quiet minds, bright futures!</p>
-        </div>
 
-        <img src="images/girlstudy.jpg" alt="a girl is studying">
+            <figure>
+                <img src="images/girlstudy.jpg" alt="A student studying at a library table">
+                <figcaption>Student utilizing one of U-M's study spaces</figcaption>
+            </figure>
+        </section>
 
-        <div class = "navigation">
-            <h2>What Are Study Spaces For</h2>
-            <p>Study Spaces at U-M is a tool designed to help you find and reserve designated study spaces, computer
-                stations, a space for you to take a remote class, or just a dedicated quiet touchdown spot between
-                classes.</p>
-            <p>It's understandable that many might be anxious that there aren't many spaces on the site,
-                after going through the last academic year where the primary method of accessing study space was to reserve.</p>
-            <p>As we proceed into the next academic year, several spaces have been designated as open and reservations are not needed. Some units took spaces offline that were offered,
-                as they currently have in-person classes this semester, or an increase in need for event space.</p>
+        <section class="navigation" aria-labelledby="study-spaces-purpose">
+            <h2 id="study-spaces-purpose">What Are Study Spaces For</h2>
+            <p>Study Spaces at U-M is a tool designed to help you find and reserve designated study spaces, computer stations, a space for you to take a remote class, or just a dedicated quiet touchdown spot between classes.</p>
+            <p>It's understandable that many might be anxious that there aren't many spaces on the site, after going through the last academic year where the primary method of accessing study space was to reserve.</p>
+            <p>As we proceed into the next academic year, several spaces have been designated as open and reservations are not needed. Some units took spaces offline that were offered, as they currently have in-person classes this semester, or an increase in need for event space.</p>
+
             <ol>
                 <li>Please be aware that there are walk-in study spaces again, and that this site is not an exhaustive list of study spaces.</li>
                 <li>Many Campus spaces are back to full availability.</li>
                 <li>Spaces at the Library are walk-in while Study Spaces are reconfigured with reservable space. Currently, there are 1st floor tables and 2nd floor reservable rooms. The Library will be a mix of walk-in and bookable spaces.</li>
             </ol>
-        </div>
+        </section>
 
+        <section class="campus-locations" aria-labelledby="available-spaces">
+            <h2 id="available-spaces">Explore What's Available and Where</h2>
 
+            <div class="location-grid">
+                <article class="location-card">
+                    <img src="images/central_campus.png" alt="Central campus building with study spaces">
+                    <h3>Central Campus</h3>
+                    <p>Various study spots including libraries, student unions, and department buildings.</p>
+                </article>
 
-        <div class = "navigation">
-            <h2>Explore What’s Available and Where</h2>
-        </div>
+                <article class="location-card">
+                    <img src="images/north_campuse.png" alt="North campus engineering buildings">
+                    <h3>North Campus</h3>
+                    <p>Tech-focused study areas with modern facilities and collaborative spaces.</p>
+                </article>
 
+                <article class="location-card">
+                    <img src="images/um_library.png" alt="University of Michigan library exterior">
+                    <h3>U-M Library</h3>
+                    <p>Multiple floors with different noise-level zones and reservable rooms.</p>
+                </article>
+            </div>
+        </section>
 
+        <section class="reservation-info">
+            <h2>Reservation Information</h2>
+            <p>See <a href="https://studyspaces.umich.edu/reserve-study-space/">How to Reserve Study Space</a> for detailed instructions.</p>
+        </section>
 
-        <div class="campus-image">
-            <img src="images/central_campus.png" alt="central campus">
-            <h4>Central Campus</h4>
-        </div>
-
-        <div class="north-image">
-            <img src="images/north_campuse.png" alt="north campus">
-            <h4>North Campus</h4>
-        </div>
-
-        <div class="library-image">
-            <img src="images/um_library.png" alt="umich library">
-            <h4>U-M Library</h4>
-        </div>
-
-
-        <div>
-            <p>See How to Reserve Study Space for reservation instructions.<a href = "https://studyspaces.umich.edu/reserve-study-space/">How to reserve study space</a></p>
-        </div>
-
-        <a href="#" class="go-to-top">Go to Top</a>
-
+        <a href="#" class="go-to-top">Return to Top</a>
     </main>
 
-    <footer class = "footer">
+    <footer class="footer">
         <p>University of Michigan School of Information @2015</p>
     </footer>
-
 </body>
-
 </html>
