@@ -30,6 +30,7 @@
         <div class = "overview">
             <h1>Student Success Portal</h1>
             <p>We would love to meet you and explore collaboration opportunities.</p>
+            <a href="/nonexistent-page">Click here for a fake page</a>
         </div>
 
         <div class = "navigation">
@@ -48,27 +49,48 @@
         <div class = "navigation">
             <h2>Physical Health</h2>
             <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
-            <h3>University Health Service (UHS)</h3>
-            <img src="images/UHS.jpg" alt="University Health Services building">
-            <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
-            <h3>Recreational Sports</h3>
-            <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
-            <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
+            <div class="resource-grid">
+                <div class="resource-item">
+                  <h3>University Health Service (UHS)</h3>
+                  <img class="UHS-image" src="images/UHS.jpg" alt="University Health Services building">
+                  <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
+                </div>
+
+                <div class="resource-item">
+                  <h3>Recreational Sports</h3>
+                  <img class="sports-image" src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+                  <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
+                </div>
+              </div>
+            </div>
         </div>
 
-        <div class = "navigation">
+        <div class="navigation">
             <h2>Mental Health</h2>
             <p>Maintaining your mental well-being is crucial for thriving in graduate school. Here are resources to support your mental health:</p>
-            <h3>Counseling and Psychological Services (CAPS):</h3>
-            <p> Access individual counseling, group therapy, workshops, and crisis intervention services.</p>
-            <h3>Wellness Coaching:</h3>
-            <p>Work with a wellness coach to develop strategies for managing stress, time, and overall well-being.</p>
-            <h3>Mindfulness Resources:</h3>
-            <p> Participate in mindfulness and meditation sessions to cultivate a calm and focused mind.</p>
-            <h3>Support Groups:</h3>
-            <p> Join peer support groups for shared experiences and collective coping strategies.</p>
-        </div>
 
+            <div class="mental-grid">
+              <div class="mental-item">
+                <h3>Counseling and Psychological Services (CAPS):</h3>
+                <p>Access individual counseling, group therapy, workshops, and crisis intervention services.</p>
+              </div>
+
+              <div class="mental-item">
+                <h3>Wellness Coaching:</h3>
+                <p>Work with a wellness coach to develop strategies for managing stress, time, and overall well-being.</p>
+              </div>
+
+              <div class="mental-item">
+                <h3>Mindfulness Resources:</h3>
+                <p>Participate in mindfulness and meditation sessions to cultivate a calm and focused mind.</p>
+              </div>
+
+              <div class="mental-item">
+                <h3>Support Groups:</h3>
+                <p>Join peer support groups for shared experiences and collective coping strategies.</p>
+              </div>
+            </div>
+        </div>
 
 
         <div class = "navigation">
@@ -86,8 +108,13 @@
         <a href="#" class="go-to-top">Go to Top</a>
 
     </main>
-    <footer class = "footer">
-        <p>University of Michigan School of Information @2015</p>
+
+    <footer>
+        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">
+            University of Michigan School of Information @2015</a> | Operation Time: 5am-5pm</p>
+        <p>© Copyrights <span id="year"></span> by University of Michigan School of Information. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
