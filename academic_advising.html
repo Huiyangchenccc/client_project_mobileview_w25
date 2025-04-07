@@ -15,7 +15,7 @@
     <a class="skip" href="#main">Skip to Main Content</a>
     <header>
         <img id="logo" src="images/logo.jpg" width="100" alt="UMSI School of Information Logo">
-        <nav aria-label="Main navigation">
+        <nav  class="navi-bar" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="food_pantry.html">Food Pantry</a></li>
@@ -65,18 +65,49 @@
         </div>
 
 
-        <section class="button-container">
-            <a href="https://sites.google.com/umich.edu/msiacademicadvising/msi-degree-requirements?authuser=1" class="custom-button">Degree Requirements</a>
-            <a href="https://sites.google.com/umich.edu/msiacademicadvising/academic-advising/connecting-with-an-advisor?authuser=1" class="custom-button">Connect with an Advisor</a>
-            <a href="https://sites.google.com/umich.edu/msiacademicadvising/degree-progress-registration/monitoring-degree-progress?authuser=1" class="custom-button">Check Your Degree Progress</a>
+        <section class="additional">
+            <h2>Additional Resources</h2>
+            <div class = "button-container">
+                <a href="https://sites.google.com/umich.edu/msiacademicadvising/msi-degree-requirements?authuser=1" class="custom-button">Degree Requirements</a>
+                <a href="https://sites.google.com/umich.edu/msiacademicadvising/academic-advising/connecting-with-an-advisor?authuser=1" class="custom-button">Connect with an Advisor</a>
+                <a href="https://sites.google.com/umich.edu/msiacademicadvising/degree-progress-registration/monitoring-degree-progress?authuser=1" class="custom-button">Check Your Degree Progress</a>
+            </div>
         </section>
 
+
+
+        <h2>UMSI Academic Advising Newsletter</h2>
+        <div class = "form-container">
+            <form id="newsletterForm">
+                <fieldset>
+                    <legend class = "legend">Enter your email and track below to get our latest updates and exclusive content delivered straight to your inbox.</legend>
+
+                    <label for="mySelect">Select your track:</label>
+                    <select id="mySelect" onchange="myFunction()">
+                      <option value="Big Data">Big Data</option>
+                      <option value="Agile">Agile</option>
+                      <option value="Libraries">Libraries</option>
+                      <option value="User Experience">User Experience</option>
+                    </select>
+
+                    <p id="demo"></p>
+
+                    <label>
+                      Your UMich Email Address:
+                      <input type="text" name="email" id="email">
+                    </label>
+
+                    <input type="submit" value="Submit" id="submitBtn">
+                  </fieldset>
+              </form>
+        </div>
+
         <a href="#" class="go-to-top">Return to Top</a>
+
     </main>
 
     <footer>
-        <p><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">
-            University of Michigan School of Information @2015</a> | Operation Time: 5am-5pm</p>
+        <p>MSI Academic Advising<a href="https://chatsupport.it.umich.edu/"> | umsi.advising.msi@umich.edu</a></p>
         <p>© Copyrights <span id="year"></span> by University of Michigan School of Information. All rights reserved.</p>
     </footer>
 

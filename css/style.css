@@ -54,7 +54,7 @@ a:hover {
 nav {
     overflow: hidden;
     background-color: #fff5c7;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
     padding: 30px;
     margin-top: 30px;
@@ -76,16 +76,6 @@ nav a.active {
     color: #FFCB05;
     border-radius: 10px;
     font-weight: bold;
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-        justify-content: center;
-        align-content: center;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-    align-content: center;
 }
 
 
@@ -93,7 +83,6 @@ nav a.active {
 h1{
     font-size: 35px;
     font-family: 'Oswald', sans-serif;
-    font-weight: heavy;
     color: #000f22;
     text-align: left;
     line-height: 45px;
@@ -193,7 +182,7 @@ img {
 }
 
 
-/* Grid layout for image and text ////////////////////////////////////////////////////////////////*/
+/* Grid layout for image and text /////////////////////////////////////////*/
 /* INDEX PAGE*/
 .UHS-image, .sports-image {
     display: grid;
@@ -219,6 +208,13 @@ img {
 }
 
 /* FOOD PANTRY PAGE*/
+.responsive-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
 .icons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -232,18 +228,10 @@ img {
     justify-self: center;
     border-radius: 100px;
 }
-
-.provides, {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.carrot-image, {
-    grid-column: 1 / -1;
+.carrot-image img {
     margin-bottom: 40px;
-    border-radius: 8px;
 }
+
 .apple-image, .vege-image, .shopping-image {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -303,6 +291,35 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
+  /* Style the email input */
+  #email {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: 1px solid #001e6a;
+    background-color: #fff4d8; /* light yellow */
+    box-sizing: border-box;
+  }
+
+  #submitBtn {
+    background-color: #004c99;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    margin-bottom:20px;
+  }
+
+  #submitBtn:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
 
 /* Go to top styles ////////////////////////// */
 
@@ -332,6 +349,12 @@ footer p{
     font-weight: bold;
 }
 
+.legend {
+    padding-bottom: 20px;
+}
+
+
+
 
 /* 404 page*/
 .wrong-page {
@@ -349,15 +372,20 @@ footer p{
     color: #555;
     margin-bottom: 20px;
 }
-.CTA {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Center buttons and search bar */
+.disconnected {
+    width: 25%;
+
 }
-.btn {
-    padding: 10px 20px;
-    background-color: #3498db; /* Blue button */
+.CTA {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px;
+    justify-items: center; /* Center content horizontally */
+}
+.btn{
+    padding: 15px 30px;
+    width: 100%;
+    background-color: #085386;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -365,42 +393,27 @@ footer p{
     transition: background-color 0.3s;
 }
 .btn:hover {
-    background-color: #2980b9;
-}
-.search-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-.search-bar {
-    padding: 10px;
-    font-size: 16px;
-    width: 250px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-btn {
-    padding: 10px 20px;
-    background-color: #2ecc71; /* Green color for the search button */
+    background-color: #a3661c;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.search-btn::before {
-    content: "🔍"; /* Placeholder for search icon */
-    font-size: 20px;
-}
-
-.search-btn:hover {
-  background-color: #27ae60;
-}
-
-img {
+.btn-go-home{
+    padding: 15px 30px;
     width: 100%;
-    height: auto;
+    background-color: #ffdc69;
+    color: #001c68;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.btn-go-home:hover {
+    background-color: #a3661c;
+    color: #fff;
+}
+.wrong-page img {
+    width: 20%;
+    height: 20%;
     margin-bottom: 20px;
     background-color: #ddd; /* Gray placeholder color */
     border-radius: 8px;
@@ -418,7 +431,7 @@ img {
 @media (min-width: 1100px) {
     body {
         font-size: 16px;;
-        background: rgb(255, 251, 224);
+        background: rgb(255, 255, 255);
     }
     /* Heading styles /////////////////////////////////////////*/
     h1{
@@ -443,6 +456,53 @@ img {
         margin-top: 30px;
         margin-bottom: 5px;
     }
+
+    /* Navigation Bar */
+
+    header {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        align-items: center;
+        padding: 20px;
+        justify-content: stretch;
+    }
+
+    /* Style for the logo */
+    #logo {
+        max-width: 100%;
+    }
+
+    /* Style for the navigation bar */
+    .navi-bar {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .navi-bar li {
+        display: inline-block;
+        justify-content: end;
+    }
+    .navi-bar a {
+        text-decoration: none;
+        padding: 10px 20px;
+        color: #000;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navi-bar a:hover {
+        color: #ff6600;
+    }
+
+    .navi-bar a.active {
+        color: #ffffff;
+    }
+
+
 
     /* INDEX PAGE*/
     .resource-grid {
